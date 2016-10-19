@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABEC333CB5EBB029F6DB1EB2 /* Pods_Taxi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6647BBAD68415392FE6F19 /* Pods_Taxi.framework */; };
+		BF1AFBEB1DB70A5200261202 /* Phone.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF1AFBEA1DB70A5200261202 /* Phone.plist */; };
+		BF1AFBED1DB70E2000261202 /* RegisterUserInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AFBEC1DB70E2000261202 /* RegisterUserInfoPage.swift */; };
+		BF1AFBEF1DB74EF100261202 /* PayPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AFBEE1DB74EF100261202 /* PayPage.swift */; };
+		BF1AFBF11DB7508A00261202 /* PayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AFBF01DB7508A00261202 /* PayInfo.swift */; };
+		BF1AFBF31DB76D5600261202 /* VerifyPhonePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AFBF21DB76D5600261202 /* VerifyPhonePage.swift */; };
 		BF31B1AF1DAF301B00B5EFC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31B1AE1DAF301B00B5EFC3 /* AppDelegate.swift */; };
 		BF31B1B11DAF301B00B5EFC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31B1B01DAF301B00B5EFC3 /* ViewController.swift */; };
 		BF31B1B41DAF301B00B5EFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF31B1B21DAF301B00B5EFC3 /* Main.storyboard */; };
@@ -14,6 +20,14 @@
 		BF31B1B91DAF301B00B5EFC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF31B1B71DAF301B00B5EFC3 /* LaunchScreen.storyboard */; };
 		BF31B1C41DAF301B00B5EFC3 /* TaxiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31B1C31DAF301B00B5EFC3 /* TaxiTests.swift */; };
 		BF31B1CF1DAF301B00B5EFC3 /* TaxiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31B1CE1DAF301B00B5EFC3 /* TaxiUITests.swift */; };
+		BF584D9D1DB4837C00DD424B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF584D9C1DB4837C00DD424B /* Location.swift */; };
+		BF7D64A51DB5F48E008FC3EF /* SelectCountryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D64A41DB5F48E008FC3EF /* SelectCountryPage.swift */; };
+		BF7D64A71DB5F7B2008FC3EF /* ContentsDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D64A61DB5F7B2008FC3EF /* ContentsDefine.swift */; };
+		BF7D64A91DB60333008FC3EF /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D64A81DB60333008FC3EF /* Country.swift */; };
+		BF7D64AB1DB60D23008FC3EF /* HundleTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D64AA1DB60D23008FC3EF /* HundleTools.swift */; };
+		BFABD42F1DB084D900B2634B /* CommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABD42E1DB084D900B2634B /* CommonDefine.swift */; };
+		BFABD4311DB08F1500B2634B /* URLDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABD4301DB08F1500B2634B /* URLDefine.swift */; };
+		BFABD4341DB09EF700B2634B /* welcome_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BFABD4331DB09EF700B2634B /* welcome_video.mp4 */; };
 		BFC4E7AB1DB0719600B173A9 /* BaseClassInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7AA1DB0719600B173A9 /* BaseClassInfo.swift */; };
 		BFC4E7AD1DB071D200B173A9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7AC1DB071D200B173A9 /* User.swift */; };
 		BFC4E7AF1DB0721400B173A9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7AE1DB0721400B173A9 /* BaseViewController.swift */; };
@@ -21,7 +35,6 @@
 		BFC4E7B41DB0725800B173A9 /* GuidePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7B31DB0725800B173A9 /* GuidePage.swift */; };
 		BFC4E7B71DB0727800B173A9 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7B61DB0727800B173A9 /* LoginPage.swift */; };
 		BFC4E7BA1DB0728E00B173A9 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7B91DB0728E00B173A9 /* RegisterPage.swift */; };
-		BFC4E7BC1DB0729F00B173A9 /* BindPayPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7BB1DB0729F00B173A9 /* BindPayPage.swift */; };
 		BFC4E7BE1DB072C500B173A9 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7BD1DB072C500B173A9 /* BaseOperation.swift */; };
 		BFC4E7C01DB072DB00B173A9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7BF1DB072DB00B173A9 /* Login.swift */; };
 		BFC4E7C21DB072EC00B173A9 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7C11DB072EC00B173A9 /* Register.swift */; };
@@ -46,6 +59,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7EB41C95DC0CB9D7EA8CD3FD /* Pods-Taxi.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxi.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-Taxi/Pods-Taxi.appstore.xcconfig"; sourceTree = "<group>"; };
+		BF1AFBEA1DB70A5200261202 /* Phone.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Phone.plist; sourceTree = "<group>"; };
+		BF1AFBEC1DB70E2000261202 /* RegisterUserInfoPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserInfoPage.swift; sourceTree = "<group>"; };
+		BF1AFBEE1DB74EF100261202 /* PayPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPage.swift; sourceTree = "<group>"; };
+		BF1AFBF01DB7508A00261202 /* PayInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayInfo.swift; sourceTree = "<group>"; };
+		BF1AFBF21DB76D5600261202 /* VerifyPhonePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyPhonePage.swift; sourceTree = "<group>"; };
 		BF31B1AB1DAF301B00B5EFC3 /* Taxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF31B1AE1DAF301B00B5EFC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF31B1B01DAF301B00B5EFC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +78,15 @@
 		BF31B1CA1DAF301B00B5EFC3 /* TaxiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF31B1CE1DAF301B00B5EFC3 /* TaxiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiUITests.swift; sourceTree = "<group>"; };
 		BF31B1D01DAF301B00B5EFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF584D9B1DB482BC00DD424B /* Taxi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Taxi-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF584D9C1DB4837C00DD424B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BF7D64A41DB5F48E008FC3EF /* SelectCountryPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryPage.swift; sourceTree = "<group>"; };
+		BF7D64A61DB5F7B2008FC3EF /* ContentsDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsDefine.swift; sourceTree = "<group>"; };
+		BF7D64A81DB60333008FC3EF /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		BF7D64AA1DB60D23008FC3EF /* HundleTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HundleTools.swift; sourceTree = "<group>"; };
+		BFABD42E1DB084D900B2634B /* CommonDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonDefine.swift; sourceTree = "<group>"; };
+		BFABD4301DB08F1500B2634B /* URLDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLDefine.swift; sourceTree = "<group>"; };
+		BFABD4331DB09EF700B2634B /* welcome_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = welcome_video.mp4; sourceTree = "<group>"; };
 		BFC4E7AA1DB0719600B173A9 /* BaseClassInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClassInfo.swift; sourceTree = "<group>"; };
 		BFC4E7AC1DB071D200B173A9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BFC4E7AE1DB0721400B173A9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -66,11 +94,13 @@
 		BFC4E7B31DB0725800B173A9 /* GuidePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidePage.swift; sourceTree = "<group>"; };
 		BFC4E7B61DB0727800B173A9 /* LoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		BFC4E7B91DB0728E00B173A9 /* RegisterPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
-		BFC4E7BB1DB0729F00B173A9 /* BindPayPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindPayPage.swift; sourceTree = "<group>"; };
 		BFC4E7BD1DB072C500B173A9 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		BFC4E7BF1DB072DB00B173A9 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		BFC4E7C11DB072EC00B173A9 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		BFC4E7C31DB072F900B173A9 /* GetCar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCar.swift; sourceTree = "<group>"; };
+		CDAAED4441722E3CAF82BCF8 /* Pods-Taxi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taxi/Pods-Taxi.release.xcconfig"; sourceTree = "<group>"; };
+		E664D9A9C58D29AC9653F6A4 /* Pods-Taxi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taxi/Pods-Taxi.debug.xcconfig"; sourceTree = "<group>"; };
+		EF6647BBAD68415392FE6F19 /* Pods_Taxi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taxi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABEC333CB5EBB029F6DB1EB2 /* Pods_Taxi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +129,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7649D308755415AB1AEC42C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E664D9A9C58D29AC9653F6A4 /* Pods-Taxi.debug.xcconfig */,
+				CDAAED4441722E3CAF82BCF8 /* Pods-Taxi.release.xcconfig */,
+				7EB41C95DC0CB9D7EA8CD3FD /* Pods-Taxi.appstore.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BF31B1A21DAF301B00B5EFC3 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +146,8 @@
 				BF31B1C21DAF301B00B5EFC3 /* TaxiTests */,
 				BF31B1CD1DAF301B00B5EFC3 /* TaxiUITests */,
 				BF31B1AC1DAF301B00B5EFC3 /* Products */,
+				7649D308755415AB1AEC42C5 /* Pods */,
+				F15187548A1BF5E00F2AEA1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,9 +164,11 @@
 		BF31B1AD1DAF301B00B5EFC3 /* Taxi */ = {
 			isa = PBXGroup;
 			children = (
+				BF584D9B1DB482BC00DD424B /* Taxi-Bridging-Header.h */,
 				BF31B1AE1DAF301B00B5EFC3 /* AppDelegate.swift */,
 				BF31B1B01DAF301B00B5EFC3 /* ViewController.swift */,
 				BFC4E7A71DB0711200B173A9 /* Xib_StoryBoard */,
+				BFC4E79D1DB0702900B173A9 /* Global */,
 				BFC4E79E1DB0703800B173A9 /* Model */,
 				BFC4E79F1DB0703F00B173A9 /* Operation */,
 				BFC4E7A01DB0704B00B173A9 /* View */,
@@ -132,7 +177,6 @@
 				BFC4E7A61DB070CF00B173A9 /* ConfigFiles */,
 				BFC4E7A51DB0707700B173A9 /* Resources */,
 				BFC4E7A11DB0705000B173A9 /* DB */,
-				BFC4E79D1DB0702900B173A9 /* Global */,
 				BFC4E7A21DB0705600B173A9 /* SDK */,
 			);
 			path = Taxi;
@@ -156,9 +200,18 @@
 			path = TaxiUITests;
 			sourceTree = "<group>";
 		};
+		BFABD4321DB09EF700B2634B /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				BFABD4331DB09EF700B2634B /* welcome_video.mp4 */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		BFC4E79D1DB0702900B173A9 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				BF584D9C1DB4837C00DD424B /* Location.swift */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -168,6 +221,8 @@
 			children = (
 				BFC4E7AA1DB0719600B173A9 /* BaseClassInfo.swift */,
 				BFC4E7AC1DB071D200B173A9 /* User.swift */,
+				BF7D64A81DB60333008FC3EF /* Country.swift */,
+				BF1AFBF01DB7508A00261202 /* PayInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -209,6 +264,7 @@
 		BFC4E7A31DB0705C00B173A9 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BF7D64AA1DB60D23008FC3EF /* HundleTools.swift */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -216,6 +272,9 @@
 		BFC4E7A41DB0706600B173A9 /* Define */ = {
 			isa = PBXGroup;
 			children = (
+				BFABD42E1DB084D900B2634B /* CommonDefine.swift */,
+				BFABD4301DB08F1500B2634B /* URLDefine.swift */,
+				BF7D64A61DB5F7B2008FC3EF /* ContentsDefine.swift */,
 			);
 			name = Define;
 			sourceTree = "<group>";
@@ -223,6 +282,7 @@
 		BFC4E7A51DB0707700B173A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFABD4321DB09EF700B2634B /* Video */,
 				BF31B1B51DAF301B00B5EFC3 /* Assets.xcassets */,
 			);
 			name = Resources;
@@ -232,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				BF31B1BA1DAF301B00B5EFC3 /* Info.plist */,
+				BF1AFBEA1DB70A5200261202 /* Phone.plist */,
 			);
 			name = ConfigFiles;
 			sourceTree = "<group>";
@@ -252,9 +313,20 @@
 				BFC4E7B31DB0725800B173A9 /* GuidePage.swift */,
 				BFC4E7B61DB0727800B173A9 /* LoginPage.swift */,
 				BFC4E7B91DB0728E00B173A9 /* RegisterPage.swift */,
-				BFC4E7BB1DB0729F00B173A9 /* BindPayPage.swift */,
+				BF7D64A41DB5F48E008FC3EF /* SelectCountryPage.swift */,
+				BF1AFBEC1DB70E2000261202 /* RegisterUserInfoPage.swift */,
+				BF1AFBEE1DB74EF100261202 /* PayPage.swift */,
+				BF1AFBF21DB76D5600261202 /* VerifyPhonePage.swift */,
 			);
 			name = pages;
+			sourceTree = "<group>";
+		};
+		F15187548A1BF5E00F2AEA1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF6647BBAD68415392FE6F19 /* Pods_Taxi.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,9 +336,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF31B1D31DAF301B00B5EFC3 /* Build configuration list for PBXNativeTarget "Taxi" */;
 			buildPhases = (
+				68AF4CBBE1E864C2CCFC0FF7 /* [CP] Check Pods Manifest.lock */,
 				BF31B1A71DAF301B00B5EFC3 /* Sources */,
 				BF31B1A81DAF301B00B5EFC3 /* Frameworks */,
 				BF31B1A91DAF301B00B5EFC3 /* Resources */,
+				7E2606FB9B7609F96B4E5AD4 /* [CP] Embed Pods Frameworks */,
+				8C11F5E94F1E2F69AB512929 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,8 +440,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1AFBEB1DB70A5200261202 /* Phone.plist in Resources */,
 				BF31B1B91DAF301B00B5EFC3 /* LaunchScreen.storyboard in Resources */,
 				BF31B1B61DAF301B00B5EFC3 /* Assets.xcassets in Resources */,
+				BFABD4341DB09EF700B2634B /* welcome_video.mp4 in Resources */,
 				BF31B1B41DAF301B00B5EFC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +464,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68AF4CBBE1E864C2CCFC0FF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E2606FB9B7609F96B4E5AD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Taxi/Pods-Taxi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C11F5E94F1E2F69AB512929 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Taxi/Pods-Taxi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF31B1A71DAF301B00B5EFC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -396,14 +521,24 @@
 				BFC4E7B41DB0725800B173A9 /* GuidePage.swift in Sources */,
 				BFC4E7AF1DB0721400B173A9 /* BaseViewController.swift in Sources */,
 				BFC4E7C01DB072DB00B173A9 /* Login.swift in Sources */,
+				BF1AFBF31DB76D5600261202 /* VerifyPhonePage.swift in Sources */,
+				BF1AFBED1DB70E2000261202 /* RegisterUserInfoPage.swift in Sources */,
+				BF7D64A71DB5F7B2008FC3EF /* ContentsDefine.swift in Sources */,
 				BFC4E7C21DB072EC00B173A9 /* Register.swift in Sources */,
+				BF584D9D1DB4837C00DD424B /* Location.swift in Sources */,
 				BFC4E7B21DB0724600B173A9 /* BasePage.swift in Sources */,
-				BFC4E7BC1DB0729F00B173A9 /* BindPayPage.swift in Sources */,
+				BF7D64A91DB60333008FC3EF /* Country.swift in Sources */,
+				BF1AFBEF1DB74EF100261202 /* PayPage.swift in Sources */,
+				BF7D64AB1DB60D23008FC3EF /* HundleTools.swift in Sources */,
 				BFC4E7BE1DB072C500B173A9 /* BaseOperation.swift in Sources */,
+				BF1AFBF11DB7508A00261202 /* PayInfo.swift in Sources */,
+				BFABD4311DB08F1500B2634B /* URLDefine.swift in Sources */,
+				BFABD42F1DB084D900B2634B /* CommonDefine.swift in Sources */,
 				BFC4E7AD1DB071D200B173A9 /* User.swift in Sources */,
 				BF31B1B11DAF301B00B5EFC3 /* ViewController.swift in Sources */,
 				BFC4E7BA1DB0728E00B173A9 /* RegisterPage.swift in Sources */,
 				BFC4E7C41DB072F900B173A9 /* GetCar.swift in Sources */,
+				BF7D64A51DB5F48E008FC3EF /* SelectCountryPage.swift in Sources */,
 				BFC4E7AB1DB0719600B173A9 /* BaseClassInfo.swift in Sources */,
 				BF31B1AF1DAF301B00B5EFC3 /* AppDelegate.swift in Sources */,
 			);
@@ -478,6 +613,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -527,6 +663,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -553,26 +690,37 @@
 		};
 		BF31B1D41DAF301B00B5EFC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E664D9A9C58D29AC9653F6A4 /* Pods-Taxi.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FEXR25UHU7;
 				INFOPLIST_FILE = Taxi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.practise.Taxi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Taxi/Taxi-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		BF31B1D51DAF301B00B5EFC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDAAED4441722E3CAF82BCF8 /* Pods-Taxi.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FEXR25UHU7;
 				INFOPLIST_FILE = Taxi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D Release";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.practise.Taxi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Release;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Taxi/Taxi-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -631,6 +779,96 @@
 			};
 			name = Release;
 		};
+		BFABD42A1DB0846100B2634B /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yongyang Zhou (G38PHSXYH4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		BFABD42B1DB0846100B2634B /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EB41C95DC0CB9D7EA8CD3FD /* Pods-Taxi.appstore.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FEXR25UHU7;
+				INFOPLIST_FILE = Taxi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D AppStore";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.practise.Taxi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = AppStore;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Taxi/Taxi-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = AppStore;
+		};
+		BFABD42C1DB0846100B2634B /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TaxiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.practise.TaxiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Taxi.app/Taxi";
+			};
+			name = AppStore;
+		};
+		BFABD42D1DB0846100B2634B /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = TaxiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.practise.TaxiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Taxi;
+			};
+			name = AppStore;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -639,6 +877,7 @@
 			buildConfigurations = (
 				BF31B1D11DAF301B00B5EFC3 /* Debug */,
 				BF31B1D21DAF301B00B5EFC3 /* Release */,
+				BFABD42A1DB0846100B2634B /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -648,6 +887,7 @@
 			buildConfigurations = (
 				BF31B1D41DAF301B00B5EFC3 /* Debug */,
 				BF31B1D51DAF301B00B5EFC3 /* Release */,
+				BFABD42B1DB0846100B2634B /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -657,6 +897,7 @@
 			buildConfigurations = (
 				BF31B1D71DAF301B00B5EFC3 /* Debug */,
 				BF31B1D81DAF301B00B5EFC3 /* Release */,
+				BFABD42C1DB0846100B2634B /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -666,6 +907,7 @@
 			buildConfigurations = (
 				BF31B1DA1DAF301B00B5EFC3 /* Debug */,
 				BF31B1DB1DAF301B00B5EFC3 /* Release */,
+				BFABD42D1DB0846100B2634B /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

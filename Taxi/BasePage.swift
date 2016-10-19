@@ -13,23 +13,37 @@ class BasePage: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK:添加导航栏按钮
+    func setNavigationItem(title:String , selector : Selector , isLeft : Bool){
+        var item : UIBarButtonItem?
+        
+        if title.hasSuffix("png"){
+            item = UIBarButtonItem.init(image: UIImage.init(named: title), style: .plain, target: self, action: selector)
+            
+        }else{
+            item = UIBarButtonItem.init(title: title, style: .plain, target: self, action: selector)
+        }
+        item?.tintColor = UIColor.darkGray
+        if isLeft{
+            self.navigationItem.leftBarButtonItem = item
+        }else{
+            self.navigationItem.rightBarButtonItem = item
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func doNext(sender:UIBarButtonItem){
+        
     }
-    */
-
+    
+    func doBack(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+       
+    }
 }
