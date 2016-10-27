@@ -18,7 +18,7 @@ func Log(messageType : String, message:String ,  function:String = #function,lin
     // 预处理来判断是否是 debug 版本,debug 版本则输入日志
     #if DEBUG
         let file = fileName.components(separatedBy: "/").last!
-        print("日志打印---messageInfo : \(messageType)__\(message); transferInfo : inFile:\(file)__onLine:\(line)__withFunction:\(function)")
+        print("日志打印: \n 信息类型:\(messageType)\n 详细信息:\(message) \n 调用者信息 : \n inFile: \(file) \n onLine: \(line) \n withFunction: \(function)")
     #else
     #endif
 }

@@ -20,7 +20,15 @@
 		BF31B1B91DAF301B00B5EFC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF31B1B71DAF301B00B5EFC3 /* LaunchScreen.storyboard */; };
 		BF31B1C41DAF301B00B5EFC3 /* TaxiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31B1C31DAF301B00B5EFC3 /* TaxiTests.swift */; };
 		BF31B1CF1DAF301B00B5EFC3 /* TaxiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31B1CE1DAF301B00B5EFC3 /* TaxiUITests.swift */; };
+		BF32A2161DB892060030DEA1 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32A2151DB892060030DEA1 /* HomePage.swift */; };
+		BF32A2181DB8ECE90030DEA1 /* UserCenterInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32A2171DB8ECE90030DEA1 /* UserCenterInfoPage.swift */; };
+		BF32A21B1DB8EFE30030DEA1 /* UserCenterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32A21A1DB8EFE30030DEA1 /* UserCenterInfo.swift */; };
+		BF44E3571DBDA09F00188DE7 /* ConfigUserInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44E3551DBDA09F00188DE7 /* ConfigUserInfoPage.swift */; };
+		BF44E3581DBDA09F00188DE7 /* ConfigUserInfoPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF44E3561DBDA09F00188DE7 /* ConfigUserInfoPage.xib */; };
 		BF584D9D1DB4837C00DD424B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF584D9C1DB4837C00DD424B /* Location.swift */; };
+		BF78A95F1DC0D9B100553ADB /* CarAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78A95E1DC0D9B100553ADB /* CarAnnotationView.swift */; };
+		BF78A9631DC0ED1500553ADB /* HomePage-Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78A9621DC0ED1500553ADB /* HomePage-Scroll.swift */; };
+		BF78A9651DC0EDD200553ADB /* HomePage-Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78A9641DC0EDD200553ADB /* HomePage-Map.swift */; };
 		BF7D64A51DB5F48E008FC3EF /* SelectCountryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D64A41DB5F48E008FC3EF /* SelectCountryPage.swift */; };
 		BF7D64A71DB5F7B2008FC3EF /* ContentsDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D64A61DB5F7B2008FC3EF /* ContentsDefine.swift */; };
 		BF7D64A91DB60333008FC3EF /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7D64A81DB60333008FC3EF /* Country.swift */; };
@@ -78,8 +86,16 @@
 		BF31B1CA1DAF301B00B5EFC3 /* TaxiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF31B1CE1DAF301B00B5EFC3 /* TaxiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiUITests.swift; sourceTree = "<group>"; };
 		BF31B1D01DAF301B00B5EFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF32A2151DB892060030DEA1 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		BF32A2171DB8ECE90030DEA1 /* UserCenterInfoPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterInfoPage.swift; sourceTree = "<group>"; };
+		BF32A21A1DB8EFE30030DEA1 /* UserCenterInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterInfo.swift; sourceTree = "<group>"; };
+		BF44E3551DBDA09F00188DE7 /* ConfigUserInfoPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigUserInfoPage.swift; sourceTree = "<group>"; };
+		BF44E3561DBDA09F00188DE7 /* ConfigUserInfoPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigUserInfoPage.xib; sourceTree = "<group>"; };
 		BF584D9B1DB482BC00DD424B /* Taxi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Taxi-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF584D9C1DB4837C00DD424B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BF78A95E1DC0D9B100553ADB /* CarAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarAnnotationView.swift; sourceTree = "<group>"; };
+		BF78A9621DC0ED1500553ADB /* HomePage-Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomePage-Scroll.swift"; sourceTree = "<group>"; };
+		BF78A9641DC0EDD200553ADB /* HomePage-Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomePage-Map.swift"; sourceTree = "<group>"; };
 		BF7D64A41DB5F48E008FC3EF /* SelectCountryPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryPage.swift; sourceTree = "<group>"; };
 		BF7D64A61DB5F7B2008FC3EF /* ContentsDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsDefine.swift; sourceTree = "<group>"; };
 		BF7D64A81DB60333008FC3EF /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -164,6 +180,7 @@
 		BF31B1AD1DAF301B00B5EFC3 /* Taxi */ = {
 			isa = PBXGroup;
 			children = (
+				BFC4E7A61DB070CF00B173A9 /* ConfigFiles */,
 				BF584D9B1DB482BC00DD424B /* Taxi-Bridging-Header.h */,
 				BF31B1AE1DAF301B00B5EFC3 /* AppDelegate.swift */,
 				BF31B1B01DAF301B00B5EFC3 /* ViewController.swift */,
@@ -174,7 +191,6 @@
 				BFC4E7A01DB0704B00B173A9 /* View */,
 				BFC4E7A31DB0705C00B173A9 /* Tool */,
 				BFC4E7A41DB0706600B173A9 /* Define */,
-				BFC4E7A61DB070CF00B173A9 /* ConfigFiles */,
 				BFC4E7A51DB0707700B173A9 /* Resources */,
 				BFC4E7A11DB0705000B173A9 /* DB */,
 				BFC4E7A21DB0705600B173A9 /* SDK */,
@@ -200,6 +216,14 @@
 			path = TaxiUITests;
 			sourceTree = "<group>";
 		};
+		BF32A2191DB8ED650030DEA1 /* subView */ = {
+			isa = PBXGroup;
+			children = (
+				BF78A95E1DC0D9B100553ADB /* CarAnnotationView.swift */,
+			);
+			name = subView;
+			sourceTree = "<group>";
+		};
 		BFABD4321DB09EF700B2634B /* Video */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +247,7 @@
 				BFC4E7AC1DB071D200B173A9 /* User.swift */,
 				BF7D64A81DB60333008FC3EF /* Country.swift */,
 				BF1AFBF01DB7508A00261202 /* PayInfo.swift */,
+				BF32A21A1DB8EFE30030DEA1 /* UserCenterInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -242,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				BFC4E7AE1DB0721400B173A9 /* BaseViewController.swift */,
+				BF32A2191DB8ED650030DEA1 /* subView */,
 				BFC4E7B01DB0721C00B173A9 /* pages */,
 			);
 			name = View;
@@ -302,6 +328,7 @@
 			children = (
 				BF31B1B21DAF301B00B5EFC3 /* Main.storyboard */,
 				BF31B1B71DAF301B00B5EFC3 /* LaunchScreen.storyboard */,
+				BF44E3561DBDA09F00188DE7 /* ConfigUserInfoPage.xib */,
 			);
 			name = Xib_StoryBoard;
 			sourceTree = "<group>";
@@ -317,6 +344,11 @@
 				BF1AFBEC1DB70E2000261202 /* RegisterUserInfoPage.swift */,
 				BF1AFBEE1DB74EF100261202 /* PayPage.swift */,
 				BF1AFBF21DB76D5600261202 /* VerifyPhonePage.swift */,
+				BF32A2151DB892060030DEA1 /* HomePage.swift */,
+				BF78A9621DC0ED1500553ADB /* HomePage-Scroll.swift */,
+				BF78A9641DC0EDD200553ADB /* HomePage-Map.swift */,
+				BF32A2171DB8ECE90030DEA1 /* UserCenterInfoPage.swift */,
+				BF44E3551DBDA09F00188DE7 /* ConfigUserInfoPage.swift */,
 			);
 			name = pages;
 			sourceTree = "<group>";
@@ -401,6 +433,7 @@
 					BF31B1AA1DAF301B00B5EFC3 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = FEXR25UHU7;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					BF31B1BE1DAF301B00B5EFC3 = {
@@ -443,6 +476,7 @@
 				BF1AFBEB1DB70A5200261202 /* Phone.plist in Resources */,
 				BF31B1B91DAF301B00B5EFC3 /* LaunchScreen.storyboard in Resources */,
 				BF31B1B61DAF301B00B5EFC3 /* Assets.xcassets in Resources */,
+				BF44E3581DBDA09F00188DE7 /* ConfigUserInfoPage.xib in Resources */,
 				BFABD4341DB09EF700B2634B /* welcome_video.mp4 in Resources */,
 				BF31B1B41DAF301B00B5EFC3 /* Main.storyboard in Resources */,
 			);
@@ -517,16 +551,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF78A95F1DC0D9B100553ADB /* CarAnnotationView.swift in Sources */,
 				BFC4E7B71DB0727800B173A9 /* LoginPage.swift in Sources */,
 				BFC4E7B41DB0725800B173A9 /* GuidePage.swift in Sources */,
 				BFC4E7AF1DB0721400B173A9 /* BaseViewController.swift in Sources */,
+				BF78A9651DC0EDD200553ADB /* HomePage-Map.swift in Sources */,
 				BFC4E7C01DB072DB00B173A9 /* Login.swift in Sources */,
 				BF1AFBF31DB76D5600261202 /* VerifyPhonePage.swift in Sources */,
+				BF78A9631DC0ED1500553ADB /* HomePage-Scroll.swift in Sources */,
 				BF1AFBED1DB70E2000261202 /* RegisterUserInfoPage.swift in Sources */,
 				BF7D64A71DB5F7B2008FC3EF /* ContentsDefine.swift in Sources */,
 				BFC4E7C21DB072EC00B173A9 /* Register.swift in Sources */,
 				BF584D9D1DB4837C00DD424B /* Location.swift in Sources */,
 				BFC4E7B21DB0724600B173A9 /* BasePage.swift in Sources */,
+				BF32A21B1DB8EFE30030DEA1 /* UserCenterInfo.swift in Sources */,
+				BF32A2161DB892060030DEA1 /* HomePage.swift in Sources */,
 				BF7D64A91DB60333008FC3EF /* Country.swift in Sources */,
 				BF1AFBEF1DB74EF100261202 /* PayPage.swift in Sources */,
 				BF7D64AB1DB60D23008FC3EF /* HundleTools.swift in Sources */,
@@ -536,11 +575,13 @@
 				BFABD42F1DB084D900B2634B /* CommonDefine.swift in Sources */,
 				BFC4E7AD1DB071D200B173A9 /* User.swift in Sources */,
 				BF31B1B11DAF301B00B5EFC3 /* ViewController.swift in Sources */,
+				BF44E3571DBDA09F00188DE7 /* ConfigUserInfoPage.swift in Sources */,
 				BFC4E7BA1DB0728E00B173A9 /* RegisterPage.swift in Sources */,
 				BFC4E7C41DB072F900B173A9 /* GetCar.swift in Sources */,
 				BF7D64A51DB5F48E008FC3EF /* SelectCountryPage.swift in Sources */,
 				BFC4E7AB1DB0719600B173A9 /* BaseClassInfo.swift in Sources */,
 				BF31B1AF1DAF301B00B5EFC3 /* AppDelegate.swift in Sources */,
+				BF32A2181DB8ECE90030DEA1 /* UserCenterInfoPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,7 +737,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FEXR25UHU7;
 				INFOPLIST_FILE = Taxi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.practise.Taxi;
@@ -714,7 +755,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FEXR25UHU7;
 				INFOPLIST_FILE = Taxi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D Release";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.practise.Taxi;
@@ -831,7 +872,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FEXR25UHU7;
 				INFOPLIST_FILE = Taxi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D AppStore";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.practise.Taxi;

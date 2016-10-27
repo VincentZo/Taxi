@@ -54,7 +54,9 @@ class VerifyPhonePage: BasePage {
     
     // MARK: 执行手机验证
     func doVerify(){
-        Log(messageType: "Infomation", message: "正在验证手机...")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.showHomePage()
+        Log(messageType: "Infomation", message: "正在验证手机...验证成功,正在前往主页面...")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
