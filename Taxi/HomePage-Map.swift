@@ -16,7 +16,7 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate{
     }
     func startLocation(){
         // 移动10米过后自动更新定位
-        self.localService.distanceFilter = 10
+        self.localService.distanceFilter = 50
         // 地图渲染的精确度
         self.localService.desiredAccuracy = kCLLocationAccuracyBest
         self.localService.delegate = self
