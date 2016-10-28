@@ -13,6 +13,15 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate{
     func addMapView(){
         self.mapView = BMKMapView.init(frame: self.view.bounds)
         self.view.addSubview(self.mapView!)
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(hidenkeyBoard(sender:)))
+        self.mapView?.addGestureRecognizer(tap)
+    }
+    // MARK:关闭键盘和隐藏 bottomView
+    func hidenkeyBoard(sender:UITapGestureRecognizer){
+        self.searchTextField.resignFirstResponder()
+        if self.isShowBottomView{
+            self.closeBottomView()
+        }
     }
     func startLocation(){
         // 移动10米过后自动更新定位
@@ -38,7 +47,7 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate{
     }
 
     
-    // MARK: localService 代理方法调用
+    // MARK: localService 代理方法调用,定位更新后调用的方法
     // 104.410534680583,30.8583771172902
     func didUpdate(_ userLocation: BMKUserLocation!) {
         //self.mapView?.updateLocationData(userLocation)
@@ -57,11 +66,10 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate{
     
     // MARK: mapView 代理方法调用
     func mapView(_ mapView: BMKMapView!, viewFor annotation: BMKAnnotation!) -> BMKAnnotationView! {
-        Log(messageType: "Infomation", message: "AnnotationView")
+        //Log(messageType: "Infomation", message: "AnnotationView")
         if annotation .isKind(of: BMKPointAnnotation.classForCoder()) && annotation === self.mapView?.annotations[0] as! BMKPointAnnotation{
-            let annotationView = BMKPinAnnotationView.init(annotation: annotation, reuseIdentifier: "annotation")
-            annotationView?.animatesDrop = true
-            annotationView?.pinColor = UInt(BMKPinAnnotationColorRed)
+            let annotationView = LocationAnnotationView.init(annotation: annotation, reuseIdentifier: "annotation")
+            annotationView?.isDraggable = true
             return annotationView
         }else{
             let carAnnotationView = CarAnnotationView.init(annotation: annotation, reuseIdentifier: "CarAnnotation")
@@ -69,8 +77,10 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate{
             return carAnnotationView
         }
     }
+    // 地图加载完成
     func mapViewDidFinishLoading(_ mapView: BMKMapView!) {
-        Log(messageType: "Infomation", message: "完成加载...")
+        Log(messageType: "Infomation", message: "完成地图加载...正在移动至定位点...")
+        
     }
     
     
@@ -148,7 +158,7 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate{
             let time = distance / (1000) * 60
             let timeStr = String(format: "%.f", time)
             annotaion.title = "到达时间:\(timeStr)分钟"
-            self.carsArriveTimes.append(time)
+            self.carsArriveTimes.append(timeStr)
         }
     }
 }

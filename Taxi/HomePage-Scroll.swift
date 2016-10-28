@@ -46,6 +46,8 @@ extension HomePage{
     
     func initNavigationItem(){
         self.setNavigationItem(title: "user.png", selector: #selector(showUserInfoPage(sender:)), isLeft: true)
+        // 设置标题视图
+        self.navigationItem.titleView = UIImageView.init(image: UIImage.init(named: "logo_uber_grey_zh_CN"))
     }
     
     func showUserInfoPage(sender:UIBarButtonItem){

@@ -47,6 +47,7 @@
 		BFC4E7C01DB072DB00B173A9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7BF1DB072DB00B173A9 /* Login.swift */; };
 		BFC4E7C21DB072EC00B173A9 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7C11DB072EC00B173A9 /* Register.swift */; };
 		BFC4E7C41DB072F900B173A9 /* GetCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7C31DB072F900B173A9 /* GetCar.swift */; };
+		BFFDBB581DC2EAF500E221ED /* LocationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDBB571DC2EAF500E221ED /* LocationAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		BFC4E7BF1DB072DB00B173A9 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		BFC4E7C11DB072EC00B173A9 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		BFC4E7C31DB072F900B173A9 /* GetCar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCar.swift; sourceTree = "<group>"; };
+		BFFDBB571DC2EAF500E221ED /* LocationAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAnnotationView.swift; sourceTree = "<group>"; };
 		CDAAED4441722E3CAF82BCF8 /* Pods-Taxi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Taxi/Pods-Taxi.release.xcconfig"; sourceTree = "<group>"; };
 		E664D9A9C58D29AC9653F6A4 /* Pods-Taxi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taxi/Pods-Taxi.debug.xcconfig"; sourceTree = "<group>"; };
 		EF6647BBAD68415392FE6F19 /* Pods_Taxi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taxi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				BF78A95E1DC0D9B100553ADB /* CarAnnotationView.swift */,
+				BFFDBB571DC2EAF500E221ED /* LocationAnnotationView.swift */,
 			);
 			name = subView;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				BFC4E7AF1DB0721400B173A9 /* BaseViewController.swift in Sources */,
 				BF78A9651DC0EDD200553ADB /* HomePage-Map.swift in Sources */,
 				BFC4E7C01DB072DB00B173A9 /* Login.swift in Sources */,
+				BFFDBB581DC2EAF500E221ED /* LocationAnnotationView.swift in Sources */,
 				BF1AFBF31DB76D5600261202 /* VerifyPhonePage.swift in Sources */,
 				BF78A9631DC0ED1500553ADB /* HomePage-Scroll.swift in Sources */,
 				BF1AFBED1DB70E2000261202 /* RegisterUserInfoPage.swift in Sources */,
