@@ -56,7 +56,7 @@ extension HomePage{
     
     func showLeftPage(){
         self.configShadow(view: self.userCenterInfoPage!.view, offset: -2, isShadow: true)
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveLinear, animations: {
             var frame = self.userCenterInfoPage!.view.bounds
             frame.origin.x = 0
             self.userCenterInfoPage!.view.frame = frame
@@ -71,7 +71,7 @@ extension HomePage{
     }
     
     func showHomePage(sender:UIControl){
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveLinear, animations: {
             var frame = self.userCenterInfoPage!.view.bounds
             frame.origin.x = -frame.size.width
             self.userCenterInfoPage!.view.frame = frame

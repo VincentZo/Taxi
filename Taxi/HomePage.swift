@@ -17,18 +17,33 @@ class HomePage: BasePage{
     var updateCarTimer : Timer?
     var carsArriveTimes : Array<String> = []
     var currentCoordinate : CLLocationCoordinate2D = CLLocationCoordinate2D.init()
+    var currentCallCarPoint : CLLocationCoordinate2D? = nil
+    var endCoordinate : CLLocationCoordinate2D?
     var isShowBottomView : Bool = false
-   //var geoCoder : BMKGeoCodeSearch = BMKGeoCodeSearch.init()
+    var geoCoder : BMKGeoCodeSearch?
+    var poiSearch : BMKPoiSearch?
+    var geoResult: BMKReverseGeoCodeResult?
+    var routeSearch: BMKRouteSearch?
+    var endAddress : String = ""
+    var dataSources : [BMKPoiInfo] = []
+    
+    // 模拟四种车型的每公里单价
+    let prices : Array<CGFloat> = [5,7,10,13]
+    // 模拟四种车型的行驶速度,每小时多少公里
+    let speeds : Array<CGFloat> = [30,40,50,60]
+    // 模拟四种车型最多准坐多少人
+    let sits : Array<Int> = [5,4,7,3]
+    
     @IBOutlet weak var bottomView : UIView!
     @IBOutlet weak var locationButton : UIButton!
     @IBOutlet weak var firstCarButton : UIButton!
 
     @IBOutlet weak var bottomViewBottomHeight: NSLayoutConstraint!
     @IBOutlet weak var bottomViewTopHeight : NSLayoutConstraint!
-    @IBOutlet weak var boardPersonTextField: UILabel!
-    @IBOutlet weak var carArriveTimeTextField: UILabel!
+    @IBOutlet weak var boardPersonLabel: UILabel!
+    @IBOutlet weak var carArriveTimeLabel: UILabel!
     
-    @IBOutlet weak var priceTextField: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     @IBOutlet weak var getCostBtn: UIButton!
     
@@ -36,13 +51,21 @@ class HomePage: BasePage{
     
     @IBOutlet weak var searchTextField: UITextField!
     
+    @IBOutlet weak var pinPointButton : UIButton!
+    
+    @IBOutlet weak var startFromHereButton : UIButton!
+    
+    @IBOutlet weak var tableView : UITableView!
+    
+    @IBOutlet weak var startAddressLabel : UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initNavigationItem()
         self.addMapView()
         self.startLocation()
         self.configSubviews()
-        
+        self.configTabelView()
     }
     
     func configSubviews(){
@@ -58,9 +81,111 @@ class HomePage: BasePage{
         //self.searchView.layer.borderColor = UIColor.black.cgColor
         self.searchView.layer.borderWidth = 1
         self.searchView.layer.cornerRadius = 5
-        self.searchTextField.leftView = UIImageView.init(image: UIImage.init(named: "Search"))
+        let btn = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 28, height: 28))
+        btn.setImage(UIImage.init(named: "Search"), for: UIControlState.normal)
+//        btn.addTarget(self, action: #selector(searchAddress(sender:)), for: .touchUpInside)
+        self.searchTextField.leftView = btn
         self.searchTextField.leftViewMode = .always
+        //self.searchTextField.delegate = self
+        self.searchTextField.addTarget(self, action: #selector(searchTextFieldDidChanged(sender:)), for: UIControlEvents.editingChanged)
+        self.searchTextField.addTarget(self, action: #selector(searchTextFieldShouldEidting(sender : )), for: UIControlEvents.editingDidBegin)
+        self.view.bringSubview(toFront: self.pinPointButton)
+        self.view.bringSubview(toFront: self.startFromHereButton)
+        self.startFromHereButton.layer.cornerRadius = 10
+        
+        self.startAddressLabel.layer.cornerRadius = 15
+        self.startAddressLabel.isHidden = true
+        self.view.bringSubview(toFront: self.startAddressLabel)
      }
+    // MARK: 添加汽车大头针视图
+    // 104.410534680583,30.8583771172902
+    func addCars(coor : CLLocationCoordinate2D){
+        
+        self.mapView?.removeOverlays(self.mapView?.overlays)
+        let firstAnnotation = self.mapView!.annotations[0] as! BMKPointAnnotation
+        var startAnno : BMKPointAnnotation? = nil
+        var endAnno : BMKPointAnnotation? = nil
+        for item in self.mapView?.annotations as! [BMKPointAnnotation]{
+            if item.title.contains(" 起点"){
+                startAnno = item
+            }
+            if item.title.contains("目的地"){
+                endAnno = item
+            }
+        }
+        self.mapView?.removeAnnotations(self.mapView!.annotations)
+        self.mapView?.addAnnotation(firstAnnotation)
+        
+        let annotation = BMKPointAnnotation.init()
+        annotation.coordinate = CLLocationCoordinate2D.init(latitude: coor.latitude + 0.0008 , longitude: coor.longitude - 0.0003)
+        annotation.title = "待客车辆"
+        
+        let annotation1 = BMKPointAnnotation.init()
+        annotation1.coordinate = CLLocationCoordinate2D.init(latitude: coor.latitude + 0.001 , longitude: coor.longitude + 0.001)
+        annotation1.title = "待客车辆"
+        
+        let annotation2 = BMKPointAnnotation.init()
+        annotation2.coordinate = CLLocationCoordinate2D.init(latitude:coor.latitude + 0.000, longitude: coor.longitude + 0.0008)
+        annotation2.title = "待客车辆"
+        
+        let annotation3 = BMKPointAnnotation.init()
+        annotation3.coordinate = CLLocationCoordinate2D.init(latitude:coor.latitude - 0.0003, longitude: coor.longitude - 0.001)
+        annotation3.title = "待客车辆"
+        
+        let annotation4 = BMKPointAnnotation.init()
+        annotation4.coordinate = CLLocationCoordinate2D.init(latitude:coor.latitude - 0.0009, longitude: coor.longitude - 0.000)
+        annotation4.title = "待客车辆"
+        
+        self.mapView?.addAnnotations([annotation,annotation1,annotation2,annotation3,annotation4])
+        
+        if startAnno != nil{
+            self.mapView?.addAnnotation(startAnno!)
+        }
+        if endAnno != nil{
+            self.mapView?.addAnnotation(endAnno!)
+        }
+        
+    }
+    
+    // MARK: 实现车辆实时更新位置的方法
+    func startTimer(){
+        self.updateCarTimer = Timer.init(timeInterval: 1, target: self, selector: #selector(updateCars), userInfo: nil, repeats: true)
+        self.updateCarTimer?.fire()
+    }
+    func stopTimer(){
+        self.updateCarTimer?.invalidate()
+    }
+    
+    // MARK:实际需要与服务器交互,获取车辆的位置信息,进行实时刷新
+    func updateCars(){
+        let annotations = self.mapView?.annotations as! [BMKPointAnnotation]
+        for index in 1..<annotations.count{
+            let annotation = annotations[index]
+            annotation.coordinate.latitude -= 0.0008
+            annotation.coordinate.longitude += 0.0008
+        }
+        //        self.mapView?.removeAnnotations(self.mapView?.annotations)
+        //        self.mapView?.addAnnotations(annotations)
+    }
+    
+    // MARK: 实现车辆到达时间
+    func getCarsArriveTime(currentPoint : CLLocationCoordinate2D){
+        let annotaions = self.mapView?.annotations as! [BMKPointAnnotation]
+        for index in 1..<annotaions.count{
+            let annotaion = annotaions[index]
+            if !annotaion.title.contains("起点") && !annotaion.title.contains("目的地"){
+                let mCurrentPoint = BMKMapPointForCoordinate(currentPoint)
+                let mAnnotationPoint = BMKMapPointForCoordinate(annotaion.coordinate)
+                let distance = BMKMetersBetweenMapPoints(mCurrentPoint , mAnnotationPoint)
+                let time = (distance / (1000*35)) * 60
+                let realTime : CGFloat = time > 0 && time < 1 ? CGFloat(1) : CGFloat(time)
+                let timeStr = String(format: "%.f", realTime)
+                annotaion.title = "到达时间:\(timeStr)分钟"
+                self.carsArriveTimes.append(timeStr)
+            }
+        }
+    }
+    
     // MARK:展示 bottomView
     func showBottomView(sender:UITapGestureRecognizer){
         if self.isShowBottomView{
@@ -68,13 +193,22 @@ class HomePage: BasePage{
         }
         self.stopTimer()
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveLinear, animations: {
-                self.bottomViewBottomHeight.constant = 0
-                self.bottomViewTopHeight.constant -= 192
-                self.view.layoutIfNeeded()
-            }) { (finished) in
-                self.isShowBottomView = true
+            self.bottomViewBottomHeight.constant = 0
+            self.bottomViewTopHeight.constant -= 192
+            self.view.layoutIfNeeded()
+        }) { (finished) in
+            self.isShowBottomView = true
+            if self.firstCarButton.currentImage != nil && self.endCoordinate == nil{
+                self.carArriveTimeLabel.text = "\(self.carsArriveTimes[0])分钟"
+                self.boardPersonLabel.text = "\(self.sits[0])人"
+                self.priceLabel.text = "￥\(self.prices[0])"
+            }
+            if self.endCoordinate != nil{
+                self.doGetCost(self.firstCarButton)
+            }
         }
     }
+    //    let image = UIImage.init(named: nav)
     // MARK: 关闭 bottomView
     func closeBottomView(){
         if !self.isShowBottomView{
@@ -89,68 +223,8 @@ class HomePage: BasePage{
         }) { (finished) in
             self.isShowBottomView = false
         }
-
-    }
-    
-    @IBAction func doSwitchCar(sender:UIButton){
-        for index in 1000...1003{
-            // 通过 tag 获取 button
-            let button = self.view.viewWithTag(index) as! UIButton
-            if sender.tag == index{
-                // 设置 button 的图片是需要调用 setImage 方法
-                sender.setImage(UIImage.init(named: "CarBtn"), for: UIControlState.normal)
-                let label = self.view.viewWithTag(index + 10) as! UILabel
-             UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: { 
-                    var frame = label.frame
-                    frame.origin.y -= 6
-                    label.frame = frame
-                }, completion: { (finished) in
-                    sender.isUserInteractionEnabled = false
-                    self.doGetCost(sender)
-             })
-                
-            }else{
-               button.setImage(nil, for: .normal)
-                let label = self.view.viewWithTag(index+10) as! UILabel
-                UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: {
-                        label.frame.origin.y = 12
-                    }, completion: { (finished) in
-                        button.isUserInteractionEnabled = true
-                })
-            }
-        }
-    }
-
-    @IBAction func doLocation(sender:UIButton){
-        self.localService.startUserLocationService()
-        self.moveMapViewToCoordinate(coordinate: self.localService.userLocation.location.coordinate)
-    }
-    // MARK: 计算路程所需的费用
-    // 获取服务器中每种车辆的单价,按照总公里数进行计算
-    @IBAction func doGetCost(_ sender: UIButton) {
         
-        //这里模拟每公里10块钱
-        var button = UIButton.init()
-        for tag in 1000...1003{
-            let btn = self.view.viewWithTag(tag) as! UIButton
-            if btn.currentImage != nil{
-                button = btn
-            }
-        }
-        let index = button.tag - 999
-        let car = self.mapView!.annotations[index] as! BMKAnnotation
-//        if sender.tag > 1000{
-//            index = sender.tag - 1000
-//            car = self.mapView!.annotations[index] as! BMKAnnotation
-//        }
-        let carAnnotationPoint = BMKMapPointForCoordinate(car.coordinate)
-        let mCurrentPoint = BMKMapPointForCoordinate(self.currentCoordinate)
-        let distance = BMKMetersBetweenMapPoints(mCurrentPoint , carAnnotationPoint)
-        let cost = String.init(format: "%.1f", distance / 1000 * 10)
-        self.priceTextField.text = "￥\(cost)"
-        self.carArriveTimeTextField.text = "\(self.carsArriveTimes[index])分钟"
     }
-    
 }
 
 

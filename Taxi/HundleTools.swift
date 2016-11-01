@@ -57,6 +57,14 @@ class HundleTools: NSObject {
         }
         return diallingCode
     }
+    
+    // MARK: 通过search 字符串截取出 city 和详细的 address
+//    class func swapCityAndAddress( search : String){
+//        //let str = search as! NSString
+//        if search.contains("省"){
+//            
+//        }
+//    }
 }
 
 
