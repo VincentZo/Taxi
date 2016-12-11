@@ -32,7 +32,7 @@
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="signOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IfJ-EJ-HTw"/>
+                                            <action selector="signOnSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cz8-uQ-ahO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdC-2T-MgD">
@@ -43,7 +43,7 @@
                                         </constraints>
                                         <state key="normal" title="注册"/>
                                         <connections>
-                                            <action selector="singIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mlb-Fj-JiH"/>
+                                            <action selector="singInSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DK2-yO-C4j"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -445,7 +445,7 @@
                                     <color key="titleColor" red="0.0" green="0.73333333329999995" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="resend:" destination="hSU-td-yg6" eventType="touchUpInside" id="mT4-N8-Nex"/>
+                                    <action selector="resendWithSender:" destination="hSU-td-yg6" eventType="touchUpInside" id="Ra9-0e-jVd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPL-cj-RdM">
@@ -456,7 +456,7 @@
                                     <color key="titleColor" red="0.0" green="0.73333333329999995" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changePhoneNumber:" destination="hSU-td-yg6" eventType="touchUpInside" id="Gbw-BP-JsD"/>
+                                    <action selector="changePhoneNumberWithSender:" destination="hSU-td-yg6" eventType="touchUpInside" id="Ocp-B0-9pg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -676,7 +676,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="doGetCost:" destination="lhD-yz-EmM" eventType="touchUpInside" id="ZlY-1N-ue6"/>
+                                            <action selector="doGetCostWithSender:" destination="lhD-yz-EmM" eventType="touchUpInside" id="uIp-R9-6Ui"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -875,6 +875,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBl-Ew-vjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5412" y="-16.641679160419791"/>
+        </scene>
+        <!--Login Page-->
+        <scene sceneID="BbM-dQ-a9u">
+            <objects>
+                <viewController storyboardIdentifier="loginPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4YD-rM-Euv" customClass="LoginPage" customModule="Taxi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BpA-8P-3yC"/>
+                        <viewControllerLayoutGuide type="bottom" id="rOf-D5-4h3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gLC-6j-2FL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWs-Xm-blG">
+                                <frame key="frameInset" minX="16" minY="120" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaB-zh-WUc">
+                                <frame key="frameInset" minX="16" minY="204" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29P-QC-uFf">
+                                <frame key="frameInset" minX="108" minY="298" width="158" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="login:" destination="4YD-rM-Euv" eventType="touchUpInside" id="dz8-xX-ryz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="29P-QC-uFf" id="u0l-a9-LxI"/>
+                        <outlet property="passWordTextField" destination="uaB-zh-WUc" id="KPv-Gd-ZqN"/>
+                        <outlet property="userNameTextField" destination="pWs-Xm-blG" id="1v8-bA-kUl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nzz-TV-ikf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6092" y="-16.641679160419791"/>
         </scene>
     </scenes>
     <resources>

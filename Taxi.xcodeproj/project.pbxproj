@@ -13,6 +13,7 @@
 		BF1AFBEF1DB74EF100261202 /* PayPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AFBEE1DB74EF100261202 /* PayPage.swift */; };
 		BF1AFBF11DB7508A00261202 /* PayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AFBF01DB7508A00261202 /* PayInfo.swift */; };
 		BF1AFBF31DB76D5600261202 /* VerifyPhonePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1AFBF21DB76D5600261202 /* VerifyPhonePage.swift */; };
+		BF27D5DA1DD9AA5200196CED /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27D5D91DD9AA5200196CED /* LoginViewModel.swift */; };
 		BF31B1AF1DAF301B00B5EFC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31B1AE1DAF301B00B5EFC3 /* AppDelegate.swift */; };
 		BF31B1B11DAF301B00B5EFC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF31B1B01DAF301B00B5EFC3 /* ViewController.swift */; };
 		BF31B1B41DAF301B00B5EFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF31B1B21DAF301B00B5EFC3 /* Main.storyboard */; };
@@ -45,10 +46,6 @@
 		BFC4E7B41DB0725800B173A9 /* GuidePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7B31DB0725800B173A9 /* GuidePage.swift */; };
 		BFC4E7B71DB0727800B173A9 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7B61DB0727800B173A9 /* LoginPage.swift */; };
 		BFC4E7BA1DB0728E00B173A9 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7B91DB0728E00B173A9 /* RegisterPage.swift */; };
-		BFC4E7BE1DB072C500B173A9 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7BD1DB072C500B173A9 /* BaseOperation.swift */; };
-		BFC4E7C01DB072DB00B173A9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7BF1DB072DB00B173A9 /* Login.swift */; };
-		BFC4E7C21DB072EC00B173A9 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7C11DB072EC00B173A9 /* Register.swift */; };
-		BFC4E7C41DB072F900B173A9 /* GetCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E7C31DB072F900B173A9 /* GetCar.swift */; };
 		BFCBD7081DC82FE7004C6608 /* HomePage-TabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBD7071DC82FE7004C6608 /* HomePage-TabelView.swift */; };
 		BFCBD70A1DC8647F004C6608 /* EndPointAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBD7091DC8647F004C6608 /* EndPointAnnotationView.swift */; };
 		BFFDBB581DC2EAF500E221ED /* LocationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDBB571DC2EAF500E221ED /* LocationAnnotationView.swift */; };
@@ -78,6 +75,7 @@
 		BF1AFBEE1DB74EF100261202 /* PayPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPage.swift; sourceTree = "<group>"; };
 		BF1AFBF01DB7508A00261202 /* PayInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayInfo.swift; sourceTree = "<group>"; };
 		BF1AFBF21DB76D5600261202 /* VerifyPhonePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyPhonePage.swift; sourceTree = "<group>"; };
+		BF27D5D91DD9AA5200196CED /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BF31B1AB1DAF301B00B5EFC3 /* Taxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF31B1AE1DAF301B00B5EFC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF31B1B01DAF301B00B5EFC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,10 +115,6 @@
 		BFC4E7B31DB0725800B173A9 /* GuidePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidePage.swift; sourceTree = "<group>"; };
 		BFC4E7B61DB0727800B173A9 /* LoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		BFC4E7B91DB0728E00B173A9 /* RegisterPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
-		BFC4E7BD1DB072C500B173A9 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
-		BFC4E7BF1DB072DB00B173A9 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		BFC4E7C11DB072EC00B173A9 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
-		BFC4E7C31DB072F900B173A9 /* GetCar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCar.swift; sourceTree = "<group>"; };
 		BFCBD7071DC82FE7004C6608 /* HomePage-TabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomePage-TabelView.swift"; sourceTree = "<group>"; };
 		BFCBD7091DC8647F004C6608 /* EndPointAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointAnnotationView.swift; sourceTree = "<group>"; };
 		BFFDBB571DC2EAF500E221ED /* LocationAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAnnotationView.swift; sourceTree = "<group>"; };
@@ -165,6 +159,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BF27D5D81DD9A60500196CED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF27D5D91DD9AA5200196CED /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BF31B1A21DAF301B00B5EFC3 = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +199,7 @@
 				BFC4E7A71DB0711200B173A9 /* Xib_StoryBoard */,
 				BFC4E79D1DB0702900B173A9 /* Global */,
 				BFC4E79E1DB0703800B173A9 /* Model */,
-				BFC4E79F1DB0703F00B173A9 /* Operation */,
+				BF27D5D81DD9A60500196CED /* ViewModel */,
 				BFC4E7A01DB0704B00B173A9 /* View */,
 				BFC4E7A31DB0705C00B173A9 /* Tool */,
 				BFC4E7A41DB0706600B173A9 /* Define */,
@@ -264,17 +266,6 @@
 				BFB28BCF1DC5967B00A2C80D /* CarInfo.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		BFC4E79F1DB0703F00B173A9 /* Operation */ = {
-			isa = PBXGroup;
-			children = (
-				BFC4E7BD1DB072C500B173A9 /* BaseOperation.swift */,
-				BFC4E7BF1DB072DB00B173A9 /* Login.swift */,
-				BFC4E7C11DB072EC00B173A9 /* Register.swift */,
-				BFC4E7C31DB072F900B173A9 /* GetCar.swift */,
-			);
-			name = Operation;
 			sourceTree = "<group>";
 		};
 		BFC4E7A01DB0704B00B173A9 /* View */ = {
@@ -453,11 +444,13 @@
 					};
 					BF31B1BE1DAF301B00B5EFC3 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = BF31B1AA1DAF301B00B5EFC3;
 					};
 					BF31B1C91DAF301B00B5EFC3 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = BF31B1AA1DAF301B00B5EFC3;
 					};
@@ -568,17 +561,16 @@
 			files = (
 				BF78A95F1DC0D9B100553ADB /* CarAnnotationView.swift in Sources */,
 				BFC4E7B71DB0727800B173A9 /* LoginPage.swift in Sources */,
+				BF27D5DA1DD9AA5200196CED /* LoginViewModel.swift in Sources */,
 				BFC4E7B41DB0725800B173A9 /* GuidePage.swift in Sources */,
 				BFC4E7AF1DB0721400B173A9 /* BaseViewController.swift in Sources */,
 				BF78A9651DC0EDD200553ADB /* HomePage-Map.swift in Sources */,
-				BFC4E7C01DB072DB00B173A9 /* Login.swift in Sources */,
 				BFFDBB581DC2EAF500E221ED /* LocationAnnotationView.swift in Sources */,
 				BF1AFBF31DB76D5600261202 /* VerifyPhonePage.swift in Sources */,
 				BF78A9631DC0ED1500553ADB /* HomePage-Scroll.swift in Sources */,
 				BF1AFBED1DB70E2000261202 /* RegisterUserInfoPage.swift in Sources */,
 				BFCBD70A1DC8647F004C6608 /* EndPointAnnotationView.swift in Sources */,
 				BF7D64A71DB5F7B2008FC3EF /* ContentsDefine.swift in Sources */,
-				BFC4E7C21DB072EC00B173A9 /* Register.swift in Sources */,
 				BF584D9D1DB4837C00DD424B /* Location.swift in Sources */,
 				BFC4E7B21DB0724600B173A9 /* BasePage.swift in Sources */,
 				BF32A21B1DB8EFE30030DEA1 /* UserCenterInfo.swift in Sources */,
@@ -587,7 +579,6 @@
 				BF1AFBEF1DB74EF100261202 /* PayPage.swift in Sources */,
 				BF7D64AB1DB60D23008FC3EF /* HundleTools.swift in Sources */,
 				BFB28BD01DC5967B00A2C80D /* CarInfo.swift in Sources */,
-				BFC4E7BE1DB072C500B173A9 /* BaseOperation.swift in Sources */,
 				BF6AEF171DC785B800936A8C /* StartPointAnnotationView.swift in Sources */,
 				BF1AFBF11DB7508A00261202 /* PayInfo.swift in Sources */,
 				BFABD4311DB08F1500B2634B /* URLDefine.swift in Sources */,
@@ -596,7 +587,6 @@
 				BF31B1B11DAF301B00B5EFC3 /* ViewController.swift in Sources */,
 				BF44E3571DBDA09F00188DE7 /* ConfigUserInfoPage.swift in Sources */,
 				BFC4E7BA1DB0728E00B173A9 /* RegisterPage.swift in Sources */,
-				BFC4E7C41DB072F900B173A9 /* GetCar.swift in Sources */,
 				BF7D64A51DB5F48E008FC3EF /* SelectCountryPage.swift in Sources */,
 				BFC4E7AB1DB0719600B173A9 /* BaseClassInfo.swift in Sources */,
 				BFCBD7081DC82FE7004C6608 /* HomePage-TabelView.swift in Sources */,

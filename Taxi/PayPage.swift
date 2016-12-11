@@ -28,7 +28,7 @@ class PayPage: BasePage,UITableViewDelegate,UITableViewDataSource {
     }
 
     override func doNext(sender:UIBarButtonItem){
-        Log(messageType: "Infomation", message: "支付方式添加成功,正在准备验证手机...")
+        Log("Infomation", message: "支付方式添加成功,正在准备验证手机...")
         let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
         let verifyPhonePage = storyBoard.instantiateViewController(withIdentifier: VerifyPhonePageIndentifier) as! VerifyPhonePage
         let naviController = UINavigationController.init(rootViewController: verifyPhonePage)
@@ -89,7 +89,7 @@ class PayPage: BasePage,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let payInfo = self.dataSources![indexPath.row]
-        Log(messageType: "Infomation", message: "使用\(payInfo.type!)进行支付,正在跳转到支付页面(请集成支付的SDK)...")
+        Log("Infomation", message: "使用\(payInfo.type!)进行支付,正在跳转到支付页面(请集成支付的SDK)...")
     }
     
 }

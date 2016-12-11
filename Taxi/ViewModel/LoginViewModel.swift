@@ -1,13 +1,12 @@
 //
-//  BaseOperation.swift
+//  LoginViewModel.swift
 //  Taxi
 //
-//  Created by Vincent on 16/10/14.
+//  Created by Vincent on 2016/11/14.
 //  Copyright © 2016年 com.vincent.study. All rights reserved.
 //
 
 import UIKit
-
-class BaseOperation: NSObject {
+class LoginViewModel: NSObject {
 
 }

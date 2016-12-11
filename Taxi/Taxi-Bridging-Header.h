@@ -9,6 +9,8 @@
 #ifndef Taxi_Bridging_Header_h
 #define Taxi_Bridging_Header_h
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 //#import "MBProgressHUD.h"
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
 #import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件

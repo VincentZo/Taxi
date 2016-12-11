@@ -21,14 +21,7 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
         self.poiSearch = BMKPoiSearch.init()
         self.routeSearch = BMKRouteSearch.init()
     }
-    // MARK:关闭键盘和隐藏 bottomView
-    func hidenkeyBoard(sender:UITapGestureRecognizer){
-        self.tableView.isHidden = true
-        self.searchTextField.resignFirstResponder()
-        if self.isShowBottomView{
-            self.closeBottomView()
-        }
-    }
+   
     //MARK : 开启定位
     func startLocation(){
         self.mapView?.showsUserLocation = false
@@ -67,7 +60,7 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
         if self.currentCoordinate.latitude != userLocation.location.coordinate.latitude || self.currentCoordinate.longitude != userLocation.location.coordinate.longitude {
             let annotation = BMKPointAnnotation.init()
             annotation.coordinate = userLocation.location.coordinate
-            annotation.title = "Vincent is here"
+            annotation.title = "You is here"
             self.mapView?.addAnnotation(annotation)
         }
         self.moveMapViewToCoordinate(coordinate: userLocation.location.coordinate)
@@ -119,7 +112,7 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
             self.startAddressLabel.isHidden = false
             self.startAddressLabel.text = result.address
         }else{
-            Log(messageType: "Error", message: "\(error)")
+            Log("Error", message: "\(error)")
         }
     }
     
@@ -150,7 +143,7 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
             self.dataSources = [BMKPoiInfo]()
             self.tableView.reloadData()
             self.tableView.isHidden = true
-            Log(messageType: "Error", message: "\(errorCode)")
+            Log("Error", message: "\(errorCode)")
         }
     }
     // MARK:点击 searchTextField leftView 的 button 进行检索
@@ -199,7 +192,7 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
                             self.boardPersonLabel.text = "\(self.sits[i])人"
                             self.priceLabel.text = "￥\(self.prices[i])"
                         }else{
-                            self.doGetCost(sender)
+                            self.doGetCost(sender: sender)
                         }
                 })
                 
@@ -222,8 +215,8 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
     }
     // MARK: 计算路程所需的费用
     // 获取服务器中每种车辆的单价,按照总公里数进行计算
-    @IBAction func doGetCost(_ sender: UIButton) {
-        
+    @IBAction func doGetCost(sender: UIButton) {
+
         if self.endCoordinate == nil{
             let alertController = UIAlertController.init(title: "信息提示", message: "请设置目的地!", preferredStyle: .alert)
             let okAction = UIAlertAction.init(title: "知道了", style: .default, handler: { (action) in
@@ -259,10 +252,21 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
             startAnnotation.coordinate = coor
             let endAnnotation = BMKPointAnnotation.init()
             endAnnotation.coordinate = self.endCoordinate!
-            self.getWay(startCoor: coor, endCoor: self.endCoordinate!)
+            self.getCarsArriveTime(currentPoint: coor)
+//            self.getWay(startCoor: coor, endCoor: self.endCoordinate!)
            
         }
     }
+    // MARK: 从这里开始叫车
+    @IBAction func startFromHere(sender : UIButton){
+        self.currentCallCarPoint = self.geoResult?.location ?? self.currentCoordinate
+        self.addCars(coor: self.currentCallCarPoint!)
+        self.getCarsArriveTime(currentPoint: self.currentCallCarPoint!)
+        if self.endCoordinate != nil{
+            self.getWay(startCoor: self.currentCallCarPoint!, endCoor: self.endCoordinate!)
+        }
+    }
+
 
     // MARK: 检索路径规划
     func getWay(startCoor : CLLocationCoordinate2D , endCoor : CLLocationCoordinate2D){
@@ -275,9 +279,9 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
         option.to = endNode
         let isWork = self.routeSearch!.drivingSearch(option)
         if isWork{
-            Log(messageType: "Success_Infomation", message: "获取驾车路线成功")
+            Log("Success_Infomation", message: "获取驾车路线成功")
         }else{
-            Log(messageType: "Error", message: "获取驾车路线失败")
+            Log("Error", message: "获取驾车路线失败")
         }
     }
     // MARK: 处理 routeSearch 结果的代理方法,处理路径检索结果
@@ -311,9 +315,9 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
             // 通过 point 构建 BMKPolyLine
             let polyLine = BMKPolyline.init(points: &points, count: UInt(planPointCounts))
             self.mapView?.add(polyLine)
-            self.mapViewFitPolyLine(polyLine)
+            self.mapViewFitPolyLine(polyline: polyLine)
         }else{
-            Log(messageType: "Error", message: "处理驾车路线结果失败")
+            Log("Error", message: "处理驾车路线结果失败")
         }
     }
 
@@ -328,15 +332,6 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
         return nil
     }
     
-    // MARK: 从这里开始叫车
-    @IBAction func startFromHere(sender : UIButton){
-        self.currentCallCarPoint = self.geoResult?.location ?? self.currentCoordinate
-        self.addCars(coor: self.currentCallCarPoint!)
-        self.getCarsArriveTime(currentPoint: self.currentCallCarPoint!)
-        if self.endCoordinate != nil{
-            self.getWay(startCoor: self.currentCallCarPoint!, endCoor: self.endCoordinate!)
-        }
-    }
     
     // MARK: 点击大头针显示按钮
     @IBAction func clickedPinPoint(sender : UIButton){
@@ -345,7 +340,7 @@ extension HomePage : BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSea
     
     
     // MARK: 根据polyline设置地图范围
-    func mapViewFitPolyLine(_ polyline: BMKPolyline!) {
+    func mapViewFitPolyLine(polyline: BMKPolyline!) {
         if polyline.pointCount < 1 {
             return
         }

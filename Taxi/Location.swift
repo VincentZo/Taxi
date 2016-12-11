@@ -50,25 +50,25 @@ class Location: NSObject,CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.location = locations.last
         // 这个方法是异步调用,所以会直接执行下面的语句
-        self.getAddressInfo(location: self.location!)
+        self.getAddressInfo(self.location!)
         
     }
     // 定位失败的代理方法
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-         Log(messageType: "Error", message: "\(error)")
+         Log("Error", message: "\(error)")
     }
     
     // 获取定位信息
-    func getAddressInfo(location: CLLocation){
+    func getAddressInfo(_ location: CLLocation){
 
         self.geoCoder?.reverseGeocodeLocation(location, completionHandler: { (placeMarks, error) in
             if placeMarks!.count > 0{
                 let placeMark = placeMarks!.last
                 self.locationInfo = (placeMark!.name)!
-                Log(messageType: "infomation", message: self.locationInfo)
+                Log("infomation", message: self.locationInfo)
             }
             if error != nil{
-                Log(messageType: "Error", message: "\(error)")
+                Log("Error", message: "\(error)")
             }
         })
     }

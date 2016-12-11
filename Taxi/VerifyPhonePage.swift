@@ -54,9 +54,10 @@ class VerifyPhonePage: BasePage {
     
     // MARK: 执行手机验证
     func doVerify(){
+        self.verifyNumberFourTextField.resignFirstResponder()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.showHomePage()
-        Log(messageType: "Infomation", message: "正在验证手机...验证成功,正在前往主页面...")
+        Log("Infomation", message: "正在验证手机...验证成功,正在前往主页面...")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -67,12 +68,12 @@ class VerifyPhonePage: BasePage {
 
     }
 
-    @IBAction func changePhoneNumber(_ sender: AnyObject) {
-        Log(messageType: "Infomation", message: "更改手机号码...")
+    @IBAction func changePhoneNumber(sender: AnyObject) {
+        Log("Infomation", message: "更改手机号码...")
     }
     
-    @IBAction func resend(_ sender: AnyObject) {
-        Log(messageType: "Infomation", message: "重新发送验证码")
+    @IBAction func resend( sender: AnyObject) {
+        Log("Infomation", message: "重新发送验证码")
     }
 }
 

@@ -90,12 +90,16 @@ class GuidePage: BasePage {
     
     
     // 登录按钮
-    @IBAction func signOn(_ sender: AnyObject) {
-        self.location.startLocation()
+    @IBAction func signOn(sender: AnyObject) {
+        let loginPage = MainStoryBoard.instantiateViewController(withIdentifier: "loginPage") as! LoginPage
+        let navigation = UINavigationController.init(rootViewController: loginPage)
+        self.present(navigation, animated: true) { 
+            //self.location.startLocation()
+        }
     }
     
     // 注册按钮
-    @IBAction func singIn(_ sender: AnyObject) {
+    @IBAction func singIn(sender: AnyObject) {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
         let registerPage = storyBoard.instantiateViewController(withIdentifier: RegisterPageIndentifier) as! RegisterPage
         //let registerPage = RegisterPage()

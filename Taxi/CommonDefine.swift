@@ -14,7 +14,7 @@ let ScreenWidth:CGFloat = UIScreen.main.bounds.size.width
 
 // swift3.0 中 : __FUNCTION__ 替换为#function
 // MARK:日志输出函数
-func Log(messageType : String, message:String ,  function:String = #function,line : Int = #line , fileName :String = #file){
+func Log(_ messageType : String, message:String ,  function:String = #function,line : Int = #line , fileName :String = #file){
     // 预处理来判断是否是 debug 版本,debug 版本则输入日志
     #if DEBUG
         let file = fileName.components(separatedBy: "/").last!

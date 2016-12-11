@@ -14,11 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate {
     var mapManager : BMKMapManager?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        self.showHomePage()
+        //self.showHomePage()
         self.mapManager = BMKMapManager()
         let ret = self.mapManager!.start("Ze0Nq7HAG4PdN9kOhXlQb578CDUcPR70", generalDelegate: self)
         if !ret{
-            Log(messageType: "Error",message: "百度地图开启出错...")
+            Log("Error",message: "百度地图开启出错...")
         }
 
         return true

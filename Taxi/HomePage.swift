@@ -87,7 +87,7 @@ class HomePage: BasePage{
         self.searchTextField.leftView = btn
         self.searchTextField.leftViewMode = .always
         //self.searchTextField.delegate = self
-        self.searchTextField.addTarget(self, action: #selector(searchTextFieldDidChanged(sender:)), for: UIControlEvents.editingChanged)
+        self.searchTextField.addTarget(self, action: #selector(searchTextFieldDidChanged(sender : )), for: UIControlEvents.editingChanged)
         self.searchTextField.addTarget(self, action: #selector(searchTextFieldShouldEidting(sender : )), for: UIControlEvents.editingDidBegin)
         self.view.bringSubview(toFront: self.pinPointButton)
         self.view.bringSubview(toFront: self.startFromHereButton)
@@ -204,7 +204,7 @@ class HomePage: BasePage{
                 self.priceLabel.text = "￥\(self.prices[0])"
             }
             if self.endCoordinate != nil{
-                self.doGetCost(self.firstCarButton)
+                self.doGetCost(sender: self.firstCarButton)
             }
         }
     }
@@ -225,6 +225,15 @@ class HomePage: BasePage{
         }
         
     }
+    // MARK:关闭键盘和隐藏 bottomView
+    func hidenkeyBoard(sender:UITapGestureRecognizer){
+        self.tableView.isHidden = true
+        self.searchTextField.resignFirstResponder()
+        if self.isShowBottomView{
+            self.closeBottomView()
+        }
+    }
+
 }
 
 
